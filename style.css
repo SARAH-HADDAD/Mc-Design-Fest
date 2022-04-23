@@ -33,10 +33,19 @@ body {
   position: absolute;
   z-index: 300;
 }
-.main-nav.fixed{
-    position: fixed;
-    background-color: var(--dark);
-} 
+.main-nav.fixed {
+  position: fixed;
+  background-color: var(--dark);
+  animation: showNav 450ms ease-in;
+}
+@keyframes showNav {
+  from {
+    transform: translateY(-5em);
+  }
+  to {
+    transform: translateY(0em);
+  }
+}
 .nav-logo {
   height: 5em;
   width: 6em;
@@ -136,11 +145,10 @@ h2 {
 }
 .right-detail h2 {
   width: 10ch;
-  
 }
 .top-div h2 {
-    text-transform: uppercase;
-  }
+  text-transform: uppercase;
+}
 h3 {
   color: var(--secondary);
   font-size: 2.6rem;
@@ -151,28 +159,28 @@ h4 {
   color: var(--secondary);
   font-size: 2rem;
 }
-h5{
+h5 {
   font-size: 1.7rem;
   font-family: var(--secondary-font);
 }
-h6{
-    margin-top: 0.5em;
-    font-family: var(--secondary-font);
-    font-weight: 900;
-    font-size: 1.5rem;
-    color: var(--primary);
+h6 {
+  margin-top: 0.5em;
+  font-family: var(--secondary-font);
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--primary);
 }
-h6:hover{
-    color: var(--secondary);
+h6:hover {
+  color: var(--secondary);
 }
 h1::first-line {
   color: var(--primary);
 }
-.schedule-time-content h5{
+.schedule-time-content h5 {
   font-weight: 500;
 }
-#WORKSHOPS h4{
-  color: var(--light);  
+#WORKSHOPS h4 {
+  color: var(--light);
   font-weight: 400;
   font-size: 1.5rem;
   padding-bottom: 0.6em;
@@ -192,7 +200,7 @@ p {
   padding-bottom: 0.1em;
 }
 .workshop-info a {
-  color:purple;
+  color: purple;
   font-size: 1.1rem;
 }
 #Home {
@@ -251,115 +259,120 @@ p {
 .about-counters p {
   font-weight: 600;
 }
-#Speakers .top-div{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom:2.5em;
+#Speakers .top-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5em;
 }
-#WORKSHOPS .workshops-top-div{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom:4em;
+#WORKSHOPS .workshops-top-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4em;
 }
-.speaker{
-    margin-top: 2em;
-    padding: 0 0.5em;
+.speaker {
+  margin-top: 2em;
+  padding: 0 0.5em;
 }
-.worshops{
-    margin-top: 4em;
-    padding: 1 1em;
+.worshops {
+  margin-top: 4em;
+  padding: 1 1em;
 }
 .workshop-info {
-    margin-left: 2rem;
-    margin-right:2rem ;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
-.speaker-visual,.WORKSHOP-IMG{
-    position: relative;
-    overflow: hidden;
+.speaker-visual,
+.WORKSHOP-IMG {
+  position: relative;
+  overflow: hidden;
 }
-.WORKSHOP-IMG{
-    margin-bottom: 2rem;
+.WORKSHOP-IMG {
+  margin-bottom: 2rem;
 }
-.speaker-visual .speaker-socials{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 0 15%;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+.speaker-visual .speaker-socials {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 15%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
-.speaker-visual .speaker-socials img{
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-    padding: 0.5em;
-    background-color: var(--secondary);
-    
-}
-
-.speaker-visual .speaker-socials img:hover{
-    background-color: var(--primary);
-}
-.speaker-visual .speaker-socials .speaker-social{
-    transform: translateY(5em);
-    transition: transform 300ms ease-out;
-}
-.speaker-visual .speaker-socials .speaker-social:nth-child(2){
-    transition-delay: 100ms;
-}
-.speaker-visual .speaker-socials .speaker-social:nth-child(3){
-    transition-delay: 200ms;
-}
-.speaker-visual:hover .speaker-socials .speaker-social{
-    transform: translateY(0);
-}
-.speaker-visual > img,.WORKSHOP-IMG> img{
-    transition: transform 300ms ease-out;
-}
-.speaker-visual:hover > img,.WORKSHOP-IMG:hover > img{
-    transform: scale(1.1);
-}
-.speaker p,.workshop-info p{
-    margin: 0.5em 0;
-    color: var(--light);
-}
-.speaker p span{
-    color:var(--grey);
-}
-.speakers .owl-nav,.workshops .owl-nav{
-width: calc(100% + 6em);
-position: absolute;
-display: flex;
-margin: auto -3em;
-justify-content: space-between;
-top: 30%;
+.speaker-visual .speaker-socials img {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  padding: 0.5em;
+  background-color: var(--secondary);
 }
 
-.speakers.speakers .owl-nav button,.workshops.workshops .owl-nav button{
-    font-size: 5em;
+.speaker-visual .speaker-socials img:hover {
+  background-color: var(--primary);
 }
-.Details{
+.speaker-visual .speaker-socials .speaker-social {
+  transform: translateY(5em);
+  transition: transform 300ms ease-out;
+}
+.speaker-visual .speaker-socials .speaker-social:nth-child(2) {
+  transition-delay: 100ms;
+}
+.speaker-visual .speaker-socials .speaker-social:nth-child(3) {
+  transition-delay: 200ms;
+}
+.speaker-visual:hover .speaker-socials .speaker-social {
+  transform: translateY(0);
+}
+.speaker-visual > img,
+.WORKSHOP-IMG > img {
+  transition: transform 300ms ease-out;
+}
+.speaker-visual:hover > img,
+.WORKSHOP-IMG:hover > img {
+  transform: scale(1.1);
+}
+.speaker p,
+.workshop-info p {
+  margin: 0.5em 0;
+  color: var(--light);
+}
+.speaker p span {
+  color: var(--grey);
+}
+.speakers .owl-nav,
+.workshops .owl-nav {
+  width: calc(100% + 6em);
+  position: absolute;
+  display: flex;
+  margin: auto -3em;
+  justify-content: space-between;
+  top: 30%;
+}
+
+.speakers.speakers .owl-nav button,
+.workshops.workshops .owl-nav button {
+  font-size: 5em;
+}
+.Details {
   flex-direction: row;
 }
-.Details img{
+.Details img {
   margin-right: 4em;
   width: 55%;
 }
-.right-detail{
+.right-detail {
   margin-top: 3em;
   margin-bottom: 3em;
   margin-left: 2em;
 }
-.right-detail span{
-font-family:inherit ;
-color: var(--primary);
+.right-detail span {
+  font-family: inherit;
+  color: var(--primary);
 }
-#SCHEDULE h2{
-margin-bottom: 1em;
-text-transform: uppercase;
+#SCHEDULE h2 {
+  margin-bottom: 1em;
+  text-transform: uppercase;
 }
 .schedule-table {
   display: flex;
@@ -418,7 +431,6 @@ text-transform: uppercase;
   transition: opacity 300ms ease-in;
   width: 100%;
   margin-bottom: 5em;
-
 }
 #LOCATION:hover {
   opacity: 1;
@@ -434,7 +446,6 @@ text-transform: uppercase;
 }
 #SPONSORS h2 {
   margin-bottom: 1.5em;
-
 }
 #SPONSORS div {
   display: flex;
@@ -444,7 +455,7 @@ text-transform: uppercase;
   width: 12%;
   margin: auto;
 }
-#contact{
+#contact {
   flex-direction: row;
 }
 .contact-parts {
@@ -476,14 +487,12 @@ text-transform: uppercase;
   color: var(--primary);
   font-size: 1.5em;
   font-weight: 600;
-
 }
 .contact-parts a.contact-phone:hover {
   color: var(--secondary);
 }
 .contact-parts p {
   margin-top: 0;
-  
 }
 .input {
   background-color: transparent;
@@ -496,7 +505,7 @@ text-transform: uppercase;
 }
 .copyright-Line {
   width: calc(100% - var(--sidePadding));
- margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 .copyright {
   margin: auto;
@@ -507,6 +516,6 @@ footer {
   flex-direction: column;
   margin-bottom: 1em;
 }
-.mc{
+.mc {
   color: purple;
 }
