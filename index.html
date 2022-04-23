@@ -2,7 +2,15 @@
 <html lang="en">
   <head>
     <title>Mc - Design Fest</title>
+    <link rel="stylesheet" href="./owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl/owl.theme.default.min.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/MC.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/MC.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/MC.svg">
+    <link rel="manifest" href="images/MC.svg">
+    <link rel="mask-icon" href="images/MC.svg" color="#000000">
+    <link rel="shortcut icon" href="images/MC.svg">
   </head>
   <body>
     <nav class="main-nav fixed">
@@ -34,7 +42,7 @@
     <header id="Home">
       <section>
         <h1>MICRO CLUB DESIGN FEST</h1>
-        <div>
+        <div class="info">
           <h4>22 AVRIL 2022</h4>
           <a href="#LOCATION"> CONFRENCE ROOM USTHB </a>
           <button href="#Details" class="second-button">DISCOVER MORE</button>
@@ -70,93 +78,171 @@
           </div>
         </div>
       </section>
-      <section id="SPEAKERS">
-        <div class="speakers-top-div">
-          <h2>Speakers</h2>
-          <button href="/Speakers" class="second-button">
-            VIEW ALL SPEAKERS
-          </button>
-          <div class="speakers">
-              <div class="speaker-info"> 
-                  <img src="images/speakers-images/1.png" alt="">
-                  <ul>
-                      <li class="speaker-social-media"><a href="https://facebook.com/Micro.Club.USTHB/">Facebook</a></li>
-                      <li class="speaker-social-media"><a href="https://www.instagram.com/microclub_usthb">Instagram</a></li>
-                      <li class="speaker-social-media"><a href="https://www.linkedin.com/in/micro-club-usthb/">LinkedIn  </a></li>
-                  </ul>
-              <h6> BOUZOUINA Feriel
-              </h6> 
-              <p>
-                Designer <span>@micro club</span>
-              </p></div>
-          </div>
-          <div class="speaker-info"> 
-            <img src="images/speakers-images/2.png" alt="">
-            <ul>
-                <li class="speaker-social-media"><a href="https://facebook.com/Micro.Club.USTHB/">Facebook</a></li>
-                <li class="speaker-social-media"><a href="https://www.instagram.com/microclub_usthb">Instagram</a></li>
-                <li class="speaker-social-media"><a href="https://www.linkedin.com/in/micro-club-usthb/">LinkedIn  </a></li>
-            </ul>
-        <h6> MADADI Youcef 
-        </h6> 
-        <p>
-         Web Developer  <span>@micro club</span>
-        </p></div>
-    </div>
-    <div class="speaker-info"> 
-        <img src="images/speakers-images/3.png" alt="">
-        <ul>
-            <li class="speaker-social-media"><a href="https://facebook.com/Micro.Club.USTHB/">Facebook</a></li>
-            <li class="speaker-social-media"><a href="https://www.instagram.com/microclub_usthb">Instagram</a></li>
-            <li class="speaker-social-media"><a href="https://www.linkedin.com/in/micro-club-usthb/">LinkedIn  </a></li>
-        </ul>
-    <h6> BRAHIM-DJELLOUL SamiLinkedIn 
-    </h6> 
-    <p>
-     Game Developer  <span>@micro club</span>
-    </p></div>
-</div>
-<div class="speaker-info"> 
-    <img src="images/speakers-images/6.png" alt="">
-    <ul>
-        <li class="speaker-social-media"><a href="https://facebook.com/Micro.Club.USTHB/">Facebook</a></li>
-        <li class="speaker-social-media"><a href="https://www.instagram.com/microclub_usthb">Instagram</a></li>
-        <li class="speaker-social-media"><a href="https://www.linkedin.com/in/micro-club-usthb/">LinkedIn  </a></li>
-    </ul>
-<h6> BOUCHRIKA Mohamed Abdelmalek
-</h6> 
-<p>
-  Robotic <span>@micro club</span>
-</p></div>
-</div>
-<div class="speaker-info"> 
-    <img src="images/speakers-images/4.png" alt="">
-    <ul>
-        <li class="speaker-social-media"><a href="https://facebook.com/Micro.Club.USTHB/">Facebook</a></li>
-        <li class="speaker-social-media"><a href="https://www.instagram.com/microclub_usthb">Instagram</a></li>
-        <li class="speaker-social-media"><a href="https://www.linkedin.com/in/micro-club-usthb/">LinkedIn  </a></li>
-    </ul>
-<h6> Maria Belkhir
-</h6> 
-<p>
-    Cyber Security engineer <span>@micro club</span>
-</p></div>
-</div>
-<div class="speaker-info"> 
-    <img src="images/speakers-images/5.png" alt="">
-    <ul>
-        <li class="speaker-social-media"><a href="https://facebook.com/Micro.Club.USTHB/">Facebook</a></li>
-        <li class="speaker-social-media"><a href="https://www.instagram.com/microclub_usthb">Instagram</a></li>
-        <li class="speaker-social-media"><a href="https://www.linkedin.com/in/micro-club-usthb/">LinkedIn  </a></li>
-    </ul>
-<h6> Alla Rakik 
-</h6> 
-<p>
-   Game Developer <span>@micro club</span>
-</p></div>
-</div>
+      <section id="Speakers">
+        <div class="top-div">
+            <h2>Speakers</h2>
+            <a href="/Speakers" class="secondary button"
+                >Veiw all speakers</a
+            >
         </div>
-      </section>
+        <div class="owl-carousel speakers">
+            <div class="speaker">
+                <div class="speaker-visual">
+                    <img
+                        class="speaker-img"
+                        src="images/xteam1.jpg"
+                        alt=""
+                    />
+                    <ul class="speaker-socials">
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.facebook.com/Micro.Club.USTHB/"
+                                ><img src="./images/facebook-f-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.instagram.com/microclub_usthb/"
+                                ><img src="./images/instagram-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.linkedin.com/in/youcef-madadi-438a33170/"
+                                ><img src="./images/linkedin-in-brands.svg" /></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <h6>First LastName</h6>
+                <p>Web Developer <span>@micro club</span></p>
+            </div>
+            <div class="speaker">
+                <div class="speaker-visual">
+                    <img
+                        class="speaker-img"
+                        src="images/xteam1.jpg"
+                        alt=""
+                    />
+                    <ul class="speaker-socials">
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.facebook.com/Micro.Club.USTHB/"
+                                ><img src="./images/facebook-f-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.instagram.com/microclub_usthb/"
+                                ><img src="./images/instagram-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.linkedin.com/in/youcef-madadi-438a33170/"
+                                ><img src="./images/linkedin-in-brands.svg" /></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <h6>First LastName</h6>
+                <p>Web Developer <span>@micro club</span></p>
+            </div>
+            <div class="speaker">
+                <div class="speaker-visual">
+                    <img
+                        class="speaker-img"
+                        src="images/xteam1.jpg"
+                        alt=""
+                    />
+                    <ul class="speaker-socials">
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.facebook.com/Micro.Club.USTHB/"
+                                ><img src="./images/facebook-f-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.instagram.com/microclub_usthb/"
+                                ><img src="./images/instagram-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.linkedin.com/in/youcef-madadi-438a33170/"
+                                ><img src="./images/linkedin-in-brands.svg" /></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <h6>First LastName</h6>
+                <p>Web Developer <span>@micro club</span></p>
+            </div>
+            <div class="speaker">
+                <div class="speaker-visual">
+                    <img
+                        class="speaker-img"
+                        src="images/xteam1.jpg"
+                        alt=""
+                    />
+                    <ul class="speaker-socials">
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.facebook.com/Micro.Club.USTHB/"
+                                ><img src="./images/facebook-f-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.instagram.com/microclub_usthb/"
+                                ><img src="./images/instagram-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.linkedin.com/in/youcef-madadi-438a33170/"
+                                ><img src="./images/linkedin-in-brands.svg" /></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <h6>First LastName</h6>
+                <p>Web Developer <span>@micro club</span></p>
+            </div>
+            <div class="speaker">
+                <div class="speaker-visual">
+                    <img
+                        class="speaker-img"
+                        src="images/xteam1.jpg"
+                        alt=""
+                    />
+                    <ul class="speaker-socials">
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.facebook.com/Micro.Club.USTHB/"
+                                ><img src="./images/facebook-f-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.instagram.com/microclub_usthb/"
+                                ><img src="./images/instagram-brands.svg" /></a
+                            >
+                        </li>
+                        <li class="speaker-social">
+                            <a
+                                href="https://www.linkedin.com/in/youcef-madadi-438a33170/"
+                                ><img src="./images/linkedin-in-brands.svg" /></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <h6>First LastName</h6>
+                <p>Web Developer <span>@micro club</span></p>
+            </div>
+        </div>
+    </section>
       <section class="Details">
           <img src="images/Celeb.jpeg" alt="">
           <div>
@@ -351,5 +437,12 @@
         </p>
     
     </footer>
+    <script src="./js/jquery-3.6.0.min.js" ></script>
+    <script src="./owl/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({items:4,nav:true});
+        });
+    </script>
   </body>
 </html>
