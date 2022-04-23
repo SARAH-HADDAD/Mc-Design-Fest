@@ -12,6 +12,7 @@
 }
 * {
   box-sizing: border-box;
+  font-family: var(--secondary-font);
 }
 html {
   scroll-behavior: smooth;
@@ -20,7 +21,6 @@ body {
   margin: 0;
   background-color: var(--background);
   color: var(--grey);
-  font-family: var(--secondary-font);
   width: 100%;
 }
 .main-nav {
@@ -33,10 +33,10 @@ body {
   position: absolute;
   z-index: 300;
 }
-/*.main-nav.fixed{
+.main-nav.fixed{
     position: fixed;
     background-color: var(--dark);
-} */
+} 
 .nav-logo {
   height: 5em;
   width: 6em;
@@ -89,7 +89,7 @@ body {
 .hover-menu {
   visibility: hidden;
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 2em;
   background-color: var(--light);
   padding: 0;
@@ -108,7 +108,6 @@ body {
 }
 .hover-element {
   display: flex;
-  flex-direction: column;
 }
 section {
   display: flex;
@@ -132,9 +131,12 @@ h1 {
   width: 8.2ch;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   font-weight: 600;
 }
+.top-div h2 {
+    text-transform: uppercase;
+  }
 h3 {
   color: var(--secondary);
   font-size: 2.6rem;
@@ -145,8 +147,24 @@ h4 {
   color: var(--secondary);
   font-size: 2rem;
 }
+h6{
+    margin-top: 0.5em;
+    font-family: var(--secondary-font);
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+h6:hover{
+    color: var(--secondary);
+}
 h1::first-line {
   color: var(--primary);
+}
+#WORKSHOPS h4{
+  color: var(--light);  
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding-bottom: 0.6em;
 }
 a {
   text-decoration: none;
@@ -154,6 +172,14 @@ a {
 }
 p {
   font-size: 1.1em;
+}
+#WORKSHOPS p {
+  color: var(--grey);
+  padding-bottom: 0.1em;
+}
+.workshop-info a {
+  color:purple;
+  font-size: 1.1rem;
 }
 #Home {
   height: 100vh;
@@ -211,18 +237,36 @@ p {
 .about-counters p {
   font-weight: 600;
 }
-#SPEAKERS .speakers-top-div{
+#Speakers .top-div{
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom:2.5em;
 }
+#WORKSHOPS .workshops-top-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:4em;
+}
 .speaker{
+    margin-top: 2em;
     padding: 0 0.5em;
 }
-.speaker-visual{
+.worshops{
+    margin-top: 4em;
+    padding: 1 1em;
+}
+.workshop-info {
+    margin-left: 2rem;
+    margin-right:2rem ;
+}
+.speaker-visual,.WORKSHOP-IMG{
     position: relative;
     overflow: hidden;
+}
+.WORKSHOP-IMG{
+    margin-bottom: 2rem;
 }
 .speaker-visual .speaker-socials{
     position: absolute;
@@ -241,6 +285,7 @@ p {
     background-color: var(--secondary);
     
 }
+
 .speaker-visual .speaker-socials img:hover{
     background-color: var(--primary);
 }
@@ -257,20 +302,20 @@ p {
 .speaker-visual:hover .speaker-socials .speaker-social{
     transform: translateY(0);
 }
-.speaker-visual > img{
+.speaker-visual > img,.WORKSHOP-IMG> img{
     transition: transform 300ms ease-out;
 }
-.speaker-visual:hover > img{
+.speaker-visual:hover > img,.WORKSHOP-IMG:hover > img{
     transform: scale(1.1);
 }
-.speaker p{
+.speaker p,.workshop-info p{
     margin: 0.5em 0;
     color: var(--light);
 }
 .speaker p span{
     color:var(--grey);
 }
-.speakers .owl-nav{
+.speakers .owl-nav,.workshops .owl-nav{
 width: calc(100% + 6em);
 position: absolute;
 display: flex;
@@ -278,6 +323,7 @@ margin: auto -3em;
 justify-content: space-between;
 top: 35%;
 }
-.speakers.speakers .owl-nav button{
+
+.speakers.speakers .owl-nav button,.workshops.workshops .owl-nav button{
     font-size: 5em;
 }
