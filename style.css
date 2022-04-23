@@ -8,7 +8,7 @@
   --dark: #0a0a0a;
   --main-font: "Mitr", sans-serif;
   --secondary-font: "Barlow", sans-serif;
-  --sidePadding: 10%;
+  --sidePadding: 5%;
 }
 * {
   box-sizing: border-box;
@@ -134,6 +134,10 @@ h2 {
   font-size: 2.7rem;
   font-weight: 600;
 }
+.right-detail h2 {
+  width: 10ch;
+  
+}
 .top-div h2 {
     text-transform: uppercase;
   }
@@ -146,6 +150,10 @@ h3 {
 h4 {
   color: var(--secondary);
   font-size: 2rem;
+}
+h5{
+  font-size: 1.7rem;
+  font-family: var(--secondary-font);
 }
 h6{
     margin-top: 0.5em;
@@ -160,6 +168,9 @@ h6:hover{
 h1::first-line {
   color: var(--primary);
 }
+.schedule-time-content h5{
+  font-weight: 500;
+}
 #WORKSHOPS h4{
   color: var(--light);  
   font-weight: 400;
@@ -172,6 +183,9 @@ a {
 }
 p {
   font-size: 1.1em;
+}
+.right-detail p {
+  font-size: 1.3em;
 }
 #WORKSHOPS p {
   color: var(--grey);
@@ -321,9 +335,178 @@ position: absolute;
 display: flex;
 margin: auto -3em;
 justify-content: space-between;
-top: 35%;
+top: 30%;
 }
 
 .speakers.speakers .owl-nav button,.workshops.workshops .owl-nav button{
     font-size: 5em;
+}
+.Details{
+  flex-direction: row;
+}
+.Details img{
+  margin-right: 4em;
+  width: 55%;
+}
+.right-detail{
+  margin-top: 3em;
+  margin-bottom: 3em;
+  margin-left: 2em;
+}
+.right-detail span{
+font-family:inherit ;
+color: var(--primary);
+}
+#SCHEDULE h2{
+margin-bottom: 1em;
+text-transform: uppercase;
+}
+.schedule-table {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark);
+  width: 100%;
+  border-radius: 1.2em;
+  padding: 2em;
+}
+
+.schedule-nav {
+  width: 100%;
+  display: flex;
+  border-bottom: 0.1em solid var(--grey);
+  justify-content: center;
+}
+
+.schedule-nav a {
+  display: flex;
+  padding: 1em 0;
+  margin: 0 1em;
+  font-weight: 650;
+  font-size: 1.2rem;
+  border-bottom: 0.3em solid transparent;
+  transition: color 300ms ease-in, border-bottom-color 300ms ease-in;
+}
+.schedule-nav a:hover,
+.schedule-nav a.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+.schedule-content {
+  padding: 2em;
+}
+.schedule-day {
+  display: none;
+  flex-direction: column;
+}
+.schedule-day.active {
+  display: flex;
+  animation: showoff 700ms ease-in;
+}
+.schedule-content-element {
+  border-bottom: 0.1em dashed var(--grey);
+  padding: 1.5em 0;
+  display: flex;
+  justify-content: space-between;
+}
+.schedule-content-element li {
+  list-style: "- ";
+  margin-top: 1.2em;
+}
+#LOCATION {
+  margin-top: 5em;
+  opacity: 0.5;
+  transition: opacity 300ms ease-in;
+  width: 100%;
+  margin-bottom: 5em;
+
+}
+#LOCATION:hover {
+  opacity: 1;
+}
+#SPONSORS {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark);
+  padding: 4em 3em;
+  border-radius: 1.2em;
+}
+#SPONSORS h2 {
+  margin-bottom: 1.5em;
+
+}
+#SPONSORS div {
+  display: flex;
+  width: 100%;
+}
+#SPONSORS div img {
+  width: 12%;
+  margin: auto;
+}
+#contact{
+  flex-direction: row;
+}
+.contact-parts {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+.contact-parts img {
+  width: 6em;
+  margin-bottom: 1em;
+}
+.contact-parts h5 {
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin-bottom: 1em;
+}
+.contact-parts a {
+  text-decoration: underline;
+  color: var(--grey);
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.contact-parts a:hover {
+  color: var(--light);
+}
+.contact-parts a.contact-phone {
+  color: var(--primary);
+  font-size: 1.5em;
+  font-weight: 600;
+
+}
+.contact-parts a.contact-phone:hover {
+  color: var(--secondary);
+}
+.contact-parts p {
+  margin-top: 0;
+  
+}
+.input {
+  background-color: transparent;
+  outline: none;
+  border: 0.1em solid var(--primary);
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  color: var(--primary);
+}
+.copyright-Line {
+  width: calc(100% - var(--sidePadding));
+ margin-bottom: 1em;
+}
+.copyright {
+  margin: auto;
+  font-size: 1.1em;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.mc{
+  color: purple;
 }
