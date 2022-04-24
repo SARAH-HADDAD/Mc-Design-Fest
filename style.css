@@ -283,7 +283,10 @@ p {
   margin-left: 2rem;
   margin-right: 2rem;
 }
-.speaker-visual,
+.speaker-visual{
+  position: relative;
+  overflow: hidden;
+}
 .WORKSHOP-IMG {
   position: relative;
   overflow: hidden;
@@ -324,15 +327,22 @@ p {
 .speaker-visual:hover .speaker-socials .speaker-social {
   transform: translateY(0);
 }
-.speaker-visual > img,
+.speaker-visual > img{
+  transition: transform 300ms ease-out;
+}
 .WORKSHOP-IMG > img {
   transition: transform 300ms ease-out;
 }
-.speaker-visual:hover > img,
+.speaker-visual:hover > img {
+  transform: scale(1.1);
+}
 .WORKSHOP-IMG:hover > img {
   transform: scale(1.1);
 }
-.speaker p,
+.speaker p {
+  margin: 0.5em 0;
+  color: var(--light);
+}
 .workshop-info p {
   margin: 0.5em 0;
   color: var(--light);
@@ -340,7 +350,14 @@ p {
 .speaker p span {
   color: var(--grey);
 }
-.speakers .owl-nav,
+.speakers .owl-nav{
+  width: calc(100% + 6em);
+  position: absolute;
+  display: flex;
+  margin: auto -3em;
+  justify-content: space-between;
+  top: 30%;
+}
 .workshops .owl-nav {
   width: calc(100% + 6em);
   position: absolute;
@@ -350,7 +367,9 @@ p {
   top: 30%;
 }
 
-.speakers.speakers .owl-nav button,
+.speakers.speakers .owl-nav button{
+  font-size: 5em;
+}
 .workshops.workshops .owl-nav button {
   font-size: 5em;
 }
@@ -414,6 +433,14 @@ p {
 .schedule-day.active {
   display: flex;
   animation: showoff 700ms ease-in;
+}
+@keyframes showoff{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .schedule-content-element {
   border-bottom: 0.1em dashed var(--grey);
